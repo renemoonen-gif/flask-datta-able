@@ -11,7 +11,7 @@
       <ul class="pc-navbar">
 
         <li class="pc-item pc-caption">
-          <label>Apps</label>
+          <label>H. Missen</label>
         </li>
         <li class="pc-item">
           <a href="{{ url_for('home_blueprint.index') }}" class="pc-link">
@@ -48,30 +48,8 @@
           </a>
         </li>
         {% endif %}
-        <li class="pc-item pc-caption">
-          <label>UI Components</label>
-          <i data-feather="feather"></i>
-        </li>
-        <li class="pc-item">
-          <a href="{{ url_for('home_blueprint.color') }}" class="pc-link">
-            <span class="pc-micon"><i data-feather="droplet"></i></span>
-            <span class="pc-mtext">Color</span>
-          </a>
-        </li>
-        <li class="pc-item">
-          <a href="{{ url_for('home_blueprint.typography') }}" class="pc-link">
-            <span class="pc-micon"><i data-feather="type"></i></span>
-            <span class="pc-mtext">Typography</span>
-          </a>
-        </li>
-        <li class="pc-item">
-          <a href="{{ url_for('home_blueprint.icon_feather') }}" class="pc-link">
-            <span class="pc-micon"><i data-feather="feather"></i></span>
-            <span class="pc-mtext">Icons</span>
-          </a>
-        </li>
-        <li class="pc-item pc-caption">
-          <label>Pages</label>
+          <li class="pc-item pc-caption">
+              <label>Pages</label>
           <i data-feather="monitor"></i>
         </li> 
         {% if not current_user.is_authenticated %}
@@ -100,7 +78,7 @@
         </li>
         {% endif %}
         <li class="pc-item pc-caption">
-          <label>Other</label>
+          <label>Styling</label>
           <i data-feather="sidebar"></i>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -157,9 +135,25 @@
             <span class="pc-mtext">Sample page</span>
           </a>
         </li>
-       
+               <li class="pc-item">
+          <a href="{{ url_for('home_blueprint.color') }}" class="pc-link">
+            <span class="pc-micon"><i data-feather="droplet"></i></span>
+            <span class="pc-mtext">Color</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{{ url_for('home_blueprint.typography') }}" class="pc-link">
+            <span class="pc-micon"><i data-feather="type"></i></span>
+            <span class="pc-mtext">Typography</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{{ url_for('home_blueprint.icon_feather') }}" class="pc-link">
+            <span class="pc-micon"><i data-feather="feather"></i></span>
+            <span class="pc-mtext">Icons</span>
+          </a>
+        </li>
       </ul>
-
       <div class="card pc-user-card my-3 bg-white bg-opacity-10">
         <div class="card-body text-center">
           <a href="https://app-generator.dev/product/datta-able/flask/" class="btn btn-success">
