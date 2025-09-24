@@ -3,7 +3,7 @@
     <div class="m-header">
       <a href="{{ url_for('home_blueprint.index') }}" class="b-brand text-primary">
         <!-- ========   Change your logo from here   ============ -->
-        <img src="{{ url_for('static', filename='assets/images/logo-white.svg') }}" class="img-fluid" alt="logo">
+        <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid" alt="logo">
       </a>
     </div>
     <div class="navbar-content">
@@ -11,9 +11,9 @@
       <ul class="pc-navbar">
 
         <li class="pc-item pc-caption">
-          <label>Apps</label>
+          <label>Overzichten</label>
         </li>
-        <li class="pc-item">
+                <li class="pc-item">
           <a href="{{ url_for('home_blueprint.index') }}" class="pc-link">
             <span class="pc-micon">
               <i data-feather="home"></i>
@@ -21,22 +21,65 @@
             <span class="pc-mtext">Dashboard</span>
           </a>
         </li>
-        <li class="pc-item">
+          <li class="pc-item">
           <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
             <span class="pc-micon">
               <i data-feather="table"></i>
             </span>
             <span class="pc-mtext">H. Missen</span>
           </a>
-        </li>         
+        </li>        
+        <li class="pc-item pc-caption">
+          <label>Invoeren</label>
+        </li>
         <li class="pc-item">
-          <a href="{{ url_for('charts_blueprint.charts') }}" class="pc-link">
+          <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
             <span class="pc-micon">
-              <i data-feather="bar-chart"></i>
+              <i data-feather="table"></i>
             </span>
-            <span class="pc-mtext">Charts</span>
+            <span class="pc-mtext">Misintenties</span>
           </a>
         </li>   
+          <li class="pc-item">
+          <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="pc-mtext">Stichtingen</span>
+          </a>
+        </li>   
+        <li class="pc-item">
+          <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="slack"></i>
+            </span>
+            <span class="pc-mtext">Parochies</span>
+          </a>
+        </li>   
+          <li class="pc-item">
+          <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="user-plus"></i>
+            </span>
+            <span class="pc-mtext">Celebranten</span>
+          </a>
+        </li>   
+          <li class="pc-item">
+          <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="sun"></i>
+            </span>
+            <span class="pc-mtext">Kerken</span>
+          </a>
+        </li>          
+          <li class="pc-item">
+          <a href="{{ url_for('table_blueprint.dynamic_dt') }}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="pc-mtext">Koren</span>
+          </a>
+        </li>           
 
         {% if current_user.is_authenticated %}
         <li class="pc-item">
@@ -49,22 +92,22 @@
         </li>
         {% endif %}
         <li class="pc-item pc-caption">
-          <label>Pages</label>
+          <label>Pagina's</label>
           <i data-feather="monitor"></i>
         </li> 
         {% if not current_user.is_authenticated %}
         <li class="pc-item">
           <a href="{{ url_for('authentication_blueprint.login') }}" class="pc-link">
             <span class="pc-micon"><i data-feather="lock"></i></span>
-            <span class="pc-mtext">Login</span>
+            <span class="pc-mtext">Inloggen</span>
           </a>
         </li>
-        <li class="pc-item">
-          <a href="{{ url_for('authentication_blueprint.register') }}" class="pc-link">
-            <span class="pc-micon"><i data-feather="user-plus"></i></span>
-            <span class="pc-mtext">Register</span>
-          </a>
-        </li>
+        <!-- <li class="pc-item"> -->
+          <!-- <a href="{{ url_for('authentication_blueprint.register') }}" class="pc-link"> -->
+            <!-- <span class="pc-micon"><i data-feather="user-plus"></i></span> -->
+            <!-- <span class="pc-mtext">Register</span> -->
+          <!-- </a> -->
+        <!-- </li> -->
         {% else %}
         <li class="pc-item">
           <a href="{{ url_for('authentication_blueprint.logout') }}" class="pc-link">
@@ -78,7 +121,7 @@
         </li>
         {% endif %}
         <li class="pc-item pc-caption">
-          <label>Other</label>
+          <label>Template elementen</label>
           <i data-feather="sidebar"></i>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -153,7 +196,14 @@
             <span class="pc-mtext">Sample page</span>
           </a>
         </li>
-       
+        <li class="pc-item">
+          <a href="{{ url_for('charts_blueprint.charts') }}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="bar-chart"></i>
+            </span>
+            <span class="pc-mtext">Charts</span>
+          </a>
+        </li>          
       </ul>
 
       <div class="card pc-user-card my-3 bg-white bg-opacity-10">
